@@ -69,6 +69,8 @@ var get_number = function() {
 var operator = function(sign) {
   if (sign === "equals") {
     get_result();
+    n1 = 0
+    n2 = 0;
     i = 0;
   } else if (sign === "negate") {
     var num = document.getElementById("screen").innerHTML;
@@ -76,7 +78,7 @@ var operator = function(sign) {
   } else {
     next_operator = sign;
     get_number();
-    calculate_step  ();
+    calculate_step();
     i = 0;
   }
 };
