@@ -1,6 +1,6 @@
-n1 = 0;
-n2 = 0;
-next_operator = '';
+var n1 = 0,
+n2 = 0,
+next_operator = '',
 i = 0;
 
 var add = function(n1, n2) {
@@ -71,8 +71,8 @@ var operator = function(sign) {
     get_result();
     i = 0;
   } else if (sign === "negate") {
-    var num = get_number();
-    document.getElementById("screen").innerHTML = num =- num;
+    var num = document.getElementById("screen").innerHTML;
+    document.getElementById("screen").innerHTML = +num * -1;
   } else {
     next_operator = sign;
     get_number();
