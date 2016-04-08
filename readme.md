@@ -4,3 +4,5 @@ I built the work in this repository as part of the Odin Project's course on Java
 
 Projects include:
 - JS-Calc - an on-screen calculator. Assignment also included a few warmup functions.
+- Restaurant - a fake restaurant website. using a single HTML page and jQuery.
+- Snake (in progress)
