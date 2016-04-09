@@ -77,3 +77,21 @@ table {
 .snake-head {
   background-color: darkgreen;
 }
+
+.snake-body {
+  background-color: lightgreen;
+}
+
+.food {
+  background-color: orange;
+}
+
+#legend {
+  display: block;
+  position: relative;
+  margin: 20px 100px;
+  height: 40px;
+  width: 600px;
+  padding: 10px;
+  border: 1px solid black;
+}
