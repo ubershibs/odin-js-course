@@ -5,7 +5,16 @@ var board = {
 
 var snake = {
   direction: [1,0],
-  body: [[20,20]]
+  body: [[20,20]],
+  feedings: 0
+}
+
+function calcPoints() {
+  var points = 0;
+  var base = (snake.body.length-1) * 100;
+  var bonus = snake.feedings * 50;
+  points = base + bonus;
+  return points;
 }
 
 function renderBoard() {
@@ -54,10 +63,26 @@ function addFood() {
   $('#board').find('div[data-position="' + x + ',' + y + '"]').addClass('food');
 }
 
+function endGame(message) {
+  var points = calcPoints();
+  $('#game-over').text("Game over - " + message + ". You got " + points + " points.");
+  $('#game-over').show("slow");
+  exit();
+}
+
 function checkFood() {
   if($('#board .snake-head').hasClass('food')) {
     $('#board .snake-head').removeClass('food');
+    snake.feedings++;
     return "ate";
+  } else {
+    return "uneaten";
+  }
+}
+
+function checkEatingSelf() {
+  if($('#board .snake-head').hasClass('snake-body')) {
+    endGame("ate self");
   } else {
     return "uneaten";
   }
@@ -67,6 +92,7 @@ function moveSnake() {
   var x = snake.body[0][0];
   var y = snake.body[0][1];
   snake.body.unshift([x + snake.direction[0], y + snake.direction[1]]);
+  checkEatingSelf();
   var foodStatus = checkFood();
   if (foodStatus !== "ate") {
     snake.body.pop();
@@ -96,16 +122,17 @@ function newDirection(event) {
 }
 
 function playGame() {
+  var speed = 300 - (snake.body.length * 10);
   setTimeout(function() {
     moveSnake();
     var x = snake.body[0][0];
     var y = snake.body[0][1];
     if(x > 39 || x < 0 || y > 39 || y < 0) {
-      console.log("game over - hit wall");
+      endGame("hit wall");
     } else {
       playGame();
     }
-  }, 450);
+  }, speed);
 }
 
 function startGame() {
@@ -115,6 +142,7 @@ function startGame() {
 }
 
 $(document).ready( function() {
+  $('#game-over').hide();
   renderBoard();
   renderSnake(20,20);
 
