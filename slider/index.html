@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Luke Walker's Slider</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+  <h1>Luke Walker's Photo Slider</h1>
+  <div id="container">
+    <div id="preview-prev"></div>
+    <div id="slideshow-viewport">
+      <div id="slidereel">
+        <div id="photo1" class="slide"></div>
+        <div id="photo2" class="slide"></div>
+        <div id="photo3" class="slide"></div>
+        <div id="photo4" class="slide"></div>
+        <div id="photo5" class="slide"></div>
+      </div>
+      <div id="prev"><i class="fa  fa-caret-left"></i></div>
+      <div id="next"><i class="fa fa-caret-right"></i></div>
+    </div>
+    <div id="preview-next"></div>
+  </div>
+  <div id="dot-nav">
+    <div class="dot current" value="0"></div>
+    <div class="dot" value="1"></div>
+    <div class="dot" value="2"></div>
+    <div class="dot" value="3"></div>
+    <div class="dot" value="4"></div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="slider.js"></script>
+</body>
+
+</html>

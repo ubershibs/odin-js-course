@@ -6,3 +6,4 @@ Projects include:
 - JS-Calc - an on-screen calculator. Assignment also included a few warmup functions.
 - Restaurant - a fake restaurant website. using a single HTML page and jQuery.
 - Snake - just like you had on your old Nokia cell phone. More jQuery practice.
+- Slider - image slider/carousel using jQuery.
