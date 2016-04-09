@@ -1,19 +1,20 @@
 var slides = {
-  position: 0,
+  position: 1,
   count: 5,
   delay: 5000
 };
 
 function updateDot() {
   $('.dot').removeClass('current');
-  var dotPicker = '.dot[value="' + slides.position + '"]';
+  var dotPicker = '.dot[value="' + (slides.position-1) + '"]';
   $(dotPicker).addClass('current');
 }
 
 function nextSlide() {
   slides.position++
-  if(slides.position > (slides.count-1)){
-    slides.position = 0;
+  if(slides.position > slides.count){
+    slides.position = 1;
+    $('#slidereel').css({left: "0"});
   }
   var left_offset = slides.position * 680;
   $('#slidereel').animate({left: "-"+left_offset+"px"})
@@ -21,7 +22,7 @@ function nextSlide() {
 }
 
 function previewNext() {
-  var next_slide = slides.position + 2;
+  var next_slide = slides.position + 1;
   if(next_slide >= slides.count) {
     next_slide = 1;
   }
@@ -29,7 +30,7 @@ function previewNext() {
 }
 
 function previewPrev() {
-  var prev_slide = slides.position;
+  var prev_slide = slides.position-1;
   if(prev_slide <= 0) {
     prev_slide = slides.count;
   }
@@ -43,8 +44,9 @@ function clearPreview() {
 
 function prevSlide() {
   slides.position--
-  if(slides.position < 0) {
-    slides.position = slides.count-1;
+  if(slides.position <= 0) {
+    slides.position = slides.count;
+    $('#slidereel').css({left: "-4080px" });
   }
   var left_offset = slides.position * 680;
   $('#slidereel').animate({left: "-"+left_offset+"px"}, 1000);
@@ -59,11 +61,27 @@ function jumpTo(event) {
 }
 
 function slideLoop() {
-  setTimeout(function() {
+  var timer = 0
+  function run() {
     nextSlide();
     slideLoop();
-  }, 5000);
+  }
+  timer = setTimeout(run, 5000);
+
+  $('#pause').click(stop);
+
+  function stop() {
+    clearTimeout(timer);
+    $('#play').css({color: "transparent", 'text-shadow': "none", display: "block"});
+    $('#pause').css({display: "none"});
+  }
 }
+
+function startSlideShow() {
+  $('#play').css({color: "transparent", display: "none"});
+  $('#pause').css({display: "block"});
+  slideLoop();
+};
 
 $(document).ready(function() {
   $('#next').hover(previewNext, clearPreview);
@@ -72,5 +90,5 @@ $(document).ready(function() {
   $('#next').click(nextSlide);
   $('#prev').click(prevSlide);
   $('.dot').click(jumpTo);
-  slideLoop();
+  $('#play').click(startSlideShow);
 });
