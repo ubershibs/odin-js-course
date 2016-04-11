@@ -73,44 +73,50 @@ h2 {
   text-align: center;
 }
 
-#board {
-  margin: 10px auto;
+#container {
+  width: 602px;
+  height: 602px;
   display: block;
   position: relative;
-  max-width: 600px;
-  max-height: 600px;
+  margin: 25px auto;
 }
 
-.row {
+#game-over {
+  width: 602px;
+  height: 602px;
   display: block;
   position: relative;
-  width: 600px;
-  height: 200px;
+  margin: 25px auto;
+  font-size: 32px;
+  padding: 200px 0;
+  text-align: center;
+  color: black;
 }
 
-.cell {
-  display: inline-block;
-  display: relative;
-  height: 200px;
+table {
+  width: 604px;
+  height: 604px;
+}
+
+td {
   width: 200px;
-  margin-right: -4px;
-  padding: 30px;
-  font-size: 140px;
+  height: 200px;
+  text-align: center;
   vertical-align: middle;
-  content: " ";
 }
 
-.row .cell:first-child {
+td[data-position="1"], td[data-position="7"] {
+  border-left: 2px solid gray;
   border-right: 2px solid gray;
 }
 
-.row .cell:last-child {
-  border-left: 2px solid gray;
-  margin-left: -2px;
+td[data-position="3"], td[data-position="5"] {
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 }
 
-.row:not(:first-child) {
-  border-top: 2px solid gray;
+td[data-position="4"] {
+  border: 2px solid gray;
 }
 
 #message {
@@ -121,34 +127,12 @@ h2 {
   height: 40px;
   margin: 10px auto;
   padding-top: 10px;
+  display: block;
+  position: relative;
 }
 
-#start {
-  position: absolute;
-  display: block;
-  top: 180px;
-  left: 180px;
-  width: 240px;
-  height: 240px;
-  background-color: lightblue;
-  font-weight: 700;
-  font-size: 40px;
-  text-align: center;
-  vertical-align: middle;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-#game-over {
-  position: absolute;
-  display: block;
-  width: 600px;
-  height: 200px;
-  font-size: 30px;
-  vertical-align: middle;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 10px;
-  top: 200px;
-  left: 0;
+.cell {
+  font-size: 100px;
+  font-family: sans-serif;
+  color: black;
 }

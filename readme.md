@@ -7,3 +7,4 @@ Projects include:
 - Restaurant - a fake restaurant website. using a single HTML page and jQuery.
 - Snake - just like you had on your old Nokia cell phone. More jQuery practice.
 - Slider - image slider/carousel using jQuery.
+- Tic Tac Toe - more or less porting my earlier Ruby command-line game to the web, in Javascript.

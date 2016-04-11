@@ -8,27 +8,29 @@
 <body>
   <h1>Tic Tac Toe</h1>
   <h2>By Luke Walker</h2>
-  <div id="board">
-    <div class="row">
-      <div class="cell" data-position="0"></div>
-      <div class="cell" data-position="1"></div>
-      <div class="cell" data-position="2"></div>
-    </div>
-    <div class="row">
-      <div class="cell" data-position="3"></div>
-      <div class="cell" data-position="4"></div>
-      <div class="cell" data-position="5"></div>
-    </div>
-    <div class="row">
-      <div class="cell" data-position="6"></div>
-      <div class="cell" data-position="7"></div>
-      <div class="cell" data-position="8"></div>
-    </div>
-    <button id="start">Start Game!</button>
+  <div id="message">You know how it works. X goes first.</div>
+  <div id="container">
+    <table id="board">
+      <tr>
+        <td class="cell" data-position="0"></td>
+        <td class="cell" data-position="1"></td>
+        <td class="cell" data-position="2"></td>
+      </tr>
+      <tr>
+        <td class="cell" data-position="3"></td>
+        <td class="cell" data-position="4"></td>
+        <td class="cell" data-position="5"></td>
+      </tr>
+      <tr>
+        <td class="cell" data-position="6"></td>
+        <td class="cell" data-position="7"></td>
+        <td class="cell" data-position="8"></td>
+      </tr>
+    </table>
     <div id="game-over"></div>
   </div>
-  <div id="message">Click Start Game to start game.</div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="tictactoe.js"></script>
+  <script src="tictactoe2.js"></script>
 </body>
 </html>
