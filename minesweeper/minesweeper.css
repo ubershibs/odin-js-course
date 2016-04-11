@@ -1,0 +1,128 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Minesweeper Styles */
+header {
+  font-family: Helvetica, sans-serif;
+  margin: 30px auto;
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+
+p {
+  font-size: 10%;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 175%;
+  line-height: 1;
+}
+
+#container {
+  width: 328px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  background-color: #c0c0c0;
+  border-top: 4px solid #fcfcfc;
+  border-left: 4px solid #fcfcfc;
+  border-bottom: 4px solid #777;
+  border-right: 4px solid #777;
+  padding: 12px;
+}
+
+#board {
+  display: block;
+  position: relative;
+  width: 296px;
+  height: 296px;
+  background-color: #fff;
+  border-top: 4px solid #777;
+  border-left: 4px solid #777;
+  border-bottom: 4px solid #fcfcfc;
+  border-right: 4px solid #fcfcfc;
+}
+
+.row {
+  width: 296px;
+  height: 32px;
+  border-spacing: 0px;
+  border: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cell {
+  display: block;
+  position: relative;
+  float: left;
+  width: 32px;
+  height: 32px;
+  background-color: #c0c0c0;
+}
+
+.covered {
+  border-top: 4px solid #fcfcfc;
+  border-left: 4px solid #fcfcfc;
+  border-bottom: 4px solid #777;
+  border-right: 4px solid #777;
+}
+
+.cleared {
+  border: 1px solid black;
+}
