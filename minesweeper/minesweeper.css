@@ -60,7 +60,7 @@ header {
 }
 
 p {
-  font-size: 10%;
+  font-size: 100%;
   line-height: 1.5;
 }
 
@@ -69,13 +69,38 @@ h1 {
   line-height: 1;
 }
 
-#container {
+#game-header {
   width: 328px;
   display: block;
   position: relative;
   margin: 0 auto;
   background-color: #c0c0c0;
   border-top: 4px solid #fcfcfc;
+  border-left: 4px solid #fcfcfc;
+  border-right: 4px solid #777;
+  padding: 12px;
+  height: 90px;
+}
+
+#header-inset {
+  background-color: #000;
+  border-top: 4px solid #777;
+  border-left: 4px solid #777;
+  border-bottom: 4px solid #fcfcfc;
+  border-right: 4px solid #fcfcfc;
+  display: block;
+  position: relative;
+  height: 70px;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+#container {
+  width: 328px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  background-color: #c0c0c0;
   border-left: 4px solid #fcfcfc;
   border-bottom: 4px solid #777;
   border-right: 4px solid #777;
@@ -92,13 +117,16 @@ h1 {
   border-left: 4px solid #777;
   border-bottom: 4px solid #fcfcfc;
   border-right: 4px solid #fcfcfc;
+  padding: 0;
+  margin: 0;
 }
 
 .row {
-  width: 296px;
+  width: 288px;
   height: 32px;
   border-spacing: 0px;
   border: none;
+  position: relative; display: block;
 }
 
 .clearfix:after {
@@ -114,6 +142,11 @@ h1 {
   width: 32px;
   height: 32px;
   background-color: #c0c0c0;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 5px;
+  font-family: Helvetica, sans-serif;
 }
 
 .covered {
@@ -125,4 +158,65 @@ h1 {
 
 .cleared {
   border: 1px solid black;
+}
+
+.flagged {
+  border-top: 4px solid #fcfcfc;
+  border-left: 4px solid #fcfcfc;
+  border-bottom: 4px solid #777;
+  border-right: 4px solid #777;
+  color: red;
+}
+
+.exploded {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.gameover {
+  z-index: 100;
+  position: absolute;
+  top: 15;
+  right: 15;
+  bottom: 15;
+  left: 15;
+  width: 298px;
+  height: 70px;
+  border: solid 3px black;
+  border-radius: 5px;
+  font-family: Helvetica, sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.gameover h3 {
+  font-size: 24px;
+}
+
+.gameover p {
+  font-size: 18px;
+}
+
+#lose {
+  display: none;
+  background-color: #ff9999;
+}
+
+#win {
+  display: none;
+  background-color: green;
+}
+
+.yellow {
+  color: yellow;
+  font-size: 60px;
+}
+
+.white {
+  margin-left: 7px;
+  margin-right: 7px;
+  font-size: 48px;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
 }

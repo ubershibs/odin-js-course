@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Minesweeper by Luke Walker</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="minesweeper.css">
 </head>
 <body>
@@ -10,9 +11,22 @@
     <h1>Minesweeper</h1>
     <p>Written in JS/using jQuery by Luke Walker</p>
   </header>
+  <div id="game-header">
+    <div id="lose" class="gameover">
+      <h3>Game over!</h3>
+      <p>You lose. Better luck next time.</p>
+    </div>
+    <div id="win" class="gameover">
+      <h3>You win!</h3>
+      <p>You found all the mines!</p>
+    </div>
+    <div id="header-inset">
+      <span id="mine-counter" class="white">000</span><i class="fa fa-smile-o yellow"></i><span id="timer" class="white">000</span>
+    </div>
+  </div>
   <div id="container">
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="minesweeper.js"></script>
+  <script src="minesweeper2.js"></script>
 </body>
 </html>

@@ -21,45 +21,143 @@ Trying out the module pattern variant explored in these articles:
  - https://css-tricks.com/how-do-you-structure-javascript-the-module-pattern-edition
 */
 
-var b,
-Board = {
 
-  settings : {
+
+function Cell(position) {
+  this.position = position;
+  this.isMine = false;
+  this.state = covered;
+  this.neighboringMines = 0;
+}
+
+Cell.prototype.neighbors = function() {
+  var neighborPos,
+      validNeighbors = []
+      directions = {[1, -1], [1, 0], [1,1], [0, -1], [0, 1], [-1,-1], [-1,0], [-1, 1]};
+      for(
+
+var b
+Board = {
+  options = {
     size: 9,
-    numBombs: 10,
-    grid: [],
-    blank: ''
+    mines: 10
   },
 
+
+  //Check whether a pair of computed coordinates is a valid square
+
+
+
+  //Reset all properties to initial values
   init: function() {
-    b = this.settings;
+    this.rows = options.size;
+    this.columns = options.size;
+    this.minesLeft = options.mines;
+    this.safeSquaresLeft = (options.size * options.size) - options.mines;
+    this.minesPositions = [];
+    this.grid = [];
+    this.moves = 0;
+
     this.buildGrid();
     this.drawGrid();
-    //this.bindUIActions();
   },
 
-  buildGrid: function() {
-    for(var i = 0; i < b.size; i++) {
-      b.grid.push([]);
-    }
-    b.grid.forEach(function(row) {
+    //Build the empty array of arrays to track safe vs. mined squares.
+    buildGrid: function() {
       for(var i = 0; i < b.size; i++) {
-        row.push(b.blank);
+        for(var j = 0; i < b.size; i++) {
+          this.grid.push(new Cell([i,j]);
+        }
       }
-    });
-  },
+    },
 
-  drawGrid: function() {
-    var myTable = $('<table id="board"></table>').appendTo('#container');
-    for(var x = 0; x < b.size; x++) {
-      var myRow = $('<tr></tr>').appendTo(myTable);
-      for(var y = 0; y < b.size; y++) {
-        myRow.append('<td class="cell covered" data-position="[' + x + ',' + y +']"></td>');
+    //Render the grid on the HTML page
+    drawGrid: function() {
+      var myTable = $('<table id="board"></table>').appendTo('#container');
+      for(var x = 0; x < this.rows; x++) {
+        var myRow = $('<tr></tr>').appendTo(myTable);
+        for(var y = 0; y < this.columns; y++) {
+          myRow.append('<td class="cell covered" data-position="[' + x + ',' + y +']"></td>');
+        }
+      }
+    },
+
+    generateMine: function() {
+      var x = Math.floor(Math.random() * options.size);
+      var y = Math.floor(Math.random() * options.size);
+      if(this.grid[][y] !== ) {
+        this.generateMine();x
+      } else {
+        options.grid[x][y] = state.mine;
+        this.minePositions.push([x,y]);
+      }
+    },
+
+    placeBombs: function() {
+      var bombsPending = options.mines;
+      while(bombsPending > 0) {
+        this.generateBomb();
+      }
+    },
+        bombsPending--;
+
+    handleClick = function(whichClick, $cell)
+      var cell = this.cells[$cell.attr("data-position")]
+      if(whichClick === 1) {
+        handleLeftClick(cell);
+      } else if(whichClick === 3) {
+        handleRightClick(cell);
+      }
+    },
+
+    handleLeftClick: function(cell) {
+      if(this.moves === 0) {
+
       }
     }
+
+    flagCell: function(event) {
+      $(event.target).addClass('red');
+      var coords = $(event.target).data("position");
+      console.log(coords);
+    },
+
+    clearCell: function(event) {
+      $(event.target).removeClass('covered').addClass('cleared');
+      var coords = $(event.target).data("position");
+      if(b.grid[coords[0]][coords[1]] === b.bomb) {
+        console.log("Bomb. Game over.");
+      } else if(b.grid[coords[0]][coords[1]] === b.blank) {
+        clearAdjacent();
+      }
+    },
+
+    clearAdjacent: function() {
+    }
+
+  };
+
+  function Cell(position) {
+    this.position = position;
+    this.state = state.blank;
+    this.isMine = false;
   }
-};
+
+})();
 
 $(document).ready(function() {
-  Board.init();
+  var setupClickHandler = function() {
+    $('#board').on('mousedown', 'td', function(event) {
+      Minesweeper.Board.handleClick(event.which, $(this));
+    });
+  };
+
+  Minesweeper.Board.init();
+
+  $('#container').on('contextmenu', function(event) {
+    event.preventDefault();
+  });
+
+  setupClickHandler();
+
 });
