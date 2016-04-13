@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Mint > Start Here</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header>
+    <div class="logolinks clearfix">
+      <div id="logo"></div>
+      <ul id="links">
+          <li>Sign up</li>
+          <li>Log in</li>
+      </ul>
+  </header>
+  <div id="content" class="clearfix">
+    <section id="left">
+      <header>
+        <h1>See all your finances in one place & create a budget</h1>
+      </header>
+      <form id="signup" method="post" action="">
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" class="textbox" placeholder="You'll verify this later" maxlength="100" required autocomplete="off" autofocus>
+        <label for="confirmemail"  class="formlabel">Confirm Email</label>
+        <input type="email" id="confirmemail" name="confirmemail" class="textbox" maxlength="100" required autocomplete="off">
+        <label for="password" class="formlabel">Password</label>
+        <input type="password" id="password" name="password" class="textbox" placeholder="Don't reuse an old password" maxlength="32" required autocomplete="new-password">
+        <label for="confirmpassword" class="formlabel">Confirm Password</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" class="textbox" maxlength="32" required autocomplete="off">
+        <fieldset>
+          <label><input type="checkbox" name="remember" class="remember">Remember me</label>
+        </fieldset>
+        <input type="submit" value="SIGN UP" class="signup">
+      </form>
+      <footer>
+        <p>By clicking Sign Up you agree to our <a>Terms of Use</a> and <a>Privacy Policy</a></p>
+      </footer>
+    </section>
+    <div id="right">
+      <aside>
+        <h2>Why you'll love it</h2>
+        <ul>
+          <li>See all your accounts in one place</li>
+          <li>Set a budget and pay down your debt</li>
+          <li>Find the best ways to grow your money</li>
+          <li>Stay safe and secure</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+  <footer class="footer">
+    <ul>
+      <li>Support Community</li>
+      <li>Terms of Use Privacy</li>
+      <li>Legal and Trademark Notices</li>
+      <li>About Intuit</li>
+    </ul>
+    <div>
+      <img src="assets/security.png">
+    </div>
+    <div>
+      <small>© 2016 Intuit, Inc.  |  ph7191.4 - spa73.10</small>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+  <script src="mint.js"></script>
+</body>
+</html>

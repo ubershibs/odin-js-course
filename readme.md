@@ -9,3 +9,4 @@ Projects include:
 - Slider - image slider/carousel using jQuery.
 - Tic Tac Toe - more or less porting my earlier Ruby command-line game to the web, in Javascript.
 - Minesweeper - learning about the module pattern, closures, and so forth.
+- Mint - learning about jQuery form validation.
