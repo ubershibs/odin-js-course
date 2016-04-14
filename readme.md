@@ -11,3 +11,4 @@ Projects include:
 - Minesweeper - learning about the module pattern, closures, and so forth.
 - Mint - learning about jQuery form validation.
 - OMDB - pulling data using Ajax, infinite scroll.
+- Google Maps - more API and AJAX fun.
