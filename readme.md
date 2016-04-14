@@ -10,3 +10,4 @@ Projects include:
 - Tic Tac Toe - more or less porting my earlier Ruby command-line game to the web, in Javascript.
 - Minesweeper - learning about the module pattern, closures, and so forth.
 - Mint - learning about jQuery form validation.
+- OMDB - pulling data using Ajax, infinite scroll.

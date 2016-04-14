@@ -42,9 +42,8 @@ var ArrestDevelopment = (function($) {
   function displayEpisode(episode) {
     console.log(episode);
     var readyData = templateEpisode(episode);
-    var poster = '<div class="poster"><img src="' + episode.Poster + '"></div>';
-    $('#container').append($('<div class="episode">' + poster +
-      '<div class="content">' + readyData + '</div>'));
+  //  var poster = '<div class="poster"><img src="' + episode.Poster + '"></div>';
+    $('#container').append($('<div class="episode">' + '<div class="content">' + readyData + '</div>'));
   }
 
   function templateEpisode(episode){
