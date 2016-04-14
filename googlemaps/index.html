@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="gmaps.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="form">
+      <form id="form" action="#" method="get">
+        <fieldset>
+          <label for="latitude">Latitude:</label>
+          <input id="latitude" name="latitude" type="number" min="-90" max="90" placeholder="43.6532" autofocus required>
+        </fieldset>
+        <fieldset>
+          <label for="longitude">Longitude:</label>
+          <input id="longitude" name="longitude" type="number" min="-180" max="180" placeholder="-79.3832" required>
+        </fieldset>
+        <fieldset id="message-fields">
+          <label for="longitude">Message:</label>
+          <input id="message" name="message" type="text" placeholder="Say something" required>
+        </fieldset>
+        <div id="submit">
+          <input type="submit" value="Place Marker">
+        </div>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="gmaps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFbUsqb2GtiCN2DUIlGYJyH8CmO6uU0BU&callback=gmaps.initMap"
+    async defer></script>
+  </body>
+</html>
