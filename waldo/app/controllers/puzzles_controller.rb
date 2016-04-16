@@ -8,10 +8,9 @@ class PuzzlesController < ApplicationController
     @puzzle = Puzzle.find(params[:id])
   end
 
-  def check_character(id, x, y)
-    @puzzle = Puzzle.fi     nd(params[:id])
-    @character = puzzle.characters.find(:id)
-    status = @character.check_location(x, y)
+  def check_character
+    @character = Character.find(params[:c])
+    status = @character.check_location(params[:x], params[:y])
     render json: status
   end
 end

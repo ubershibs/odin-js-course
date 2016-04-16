@@ -7,17 +7,15 @@ class Character < ActiveRecord::Base
   validates :name, presence: true
 
   def check_location(x, y)
-    x_range = [self.left, self.right]
-    y_range = [self.top, self.bottom]
     valid = []
 
-    if x >= x_range[0] && x<= x_range[1]
+    if x >= self.left && x <= self.right
       valid << true
     else
       valid << false
     end
 
-    if y >= y_range[0] && y<= y_range[1]
+    if y >= self.top && y <= self.bottom
       valid << true
     else
       valid << false

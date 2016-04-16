@@ -1,4 +1,4 @@
-var waldoFinder = (function($){
+var puzzle = (function($){
 
   var finderListener = function() {
     $('#puzzle').click(function(event) {
@@ -23,7 +23,7 @@ var waldoFinder = (function($){
 
       $.ajax({
         url: '/check_character',
-        data: {id: character, x: relX, y: relY
+        data: {c: character, x: relX, y: relY
         },
         type: "GET",
         dataType: "json",
@@ -36,6 +36,7 @@ var waldoFinder = (function($){
 
   var setupListeners = function() {
     finderListener();
+    console.log("ran setupListeners");
   };
 
   return {
@@ -44,4 +45,4 @@ var waldoFinder = (function($){
 
 })(jQuery);
 
-$(waldoFinder.setupListeners);
+$(puzzle.setupListeners);
