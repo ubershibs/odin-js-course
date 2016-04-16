@@ -1,0 +1,9 @@
+<div id="puzzle-div">
+  <h1><%= @puzzle.title %></h1>
+  <%= image_tag(@puzzle.image, id: 'puzzle') %>
+  <div id="picker">
+    <div id="1" class="character">Waldo</div>
+    <div id="2" class="character">Odlaw</div>
+  </div>
+</div>
+<div id="back"><%= link_to("Back", puzzles_path) %></div>
