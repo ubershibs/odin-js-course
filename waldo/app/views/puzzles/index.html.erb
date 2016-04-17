@@ -1,9 +1,11 @@
 <h1>Please pick a puzzle:</h1>
 <% for puzzle in @puzzles %>
+  <%= link_to puzzle_path(puzzle) do %>
   <div class="puzzle-brief">
     <h2><%= puzzle.title %></h2>
     <p><%= puzzle.level %></p>
     <%= link_to( image_tag("thumbs/#{puzzle.image}"), puzzle_path(puzzle)) %>
   </div>
+  <% end %>
 <% end %>
 

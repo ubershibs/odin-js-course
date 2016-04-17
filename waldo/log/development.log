@@ -24492,3 +24492,77 @@ Started GET "/assets/puzzles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/thumbs/waldo1-528e8b193e9d22e39ce356471c0e5a13259d54b8038134be15c77eaf60213b3a.jpg" for ::1 at 2016-04-17 14:49:04 -0400
+
+
+Started GET "/" for ::1 at 2016-04-17 19:39:04 -0400
+Processing by PuzzlesController#index as HTML
+  [1m[35mPuzzle Load (0.3ms)[0m  SELECT "puzzles".* FROM "puzzles"
+  Rendered puzzles/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 215ms (Views: 213.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/puzzles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/waldo.self-c96b2560f48bf72daad2ddbf8ab0d7d76f57bea4053ce443210f5bb005172d34.css?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/puzzle.self-d95267947f04ba5b6de4dbbeeaabc60829e097dc1977e594949b85fdbbfe93b3.js?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/puzzles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/assets/thumbs/waldo1-528e8b193e9d22e39ce356471c0e5a13259d54b8038134be15c77eaf60213b3a.jpg" for ::1 at 2016-04-17 19:39:05 -0400
+
+
+Started GET "/" for ::1 at 2016-04-17 19:39:59 -0400
+Processing by PuzzlesController#index as HTML
+  [1m[36mPuzzle Load (0.3ms)[0m  [1mSELECT "puzzles".* FROM "puzzles"[0m
+  Rendered puzzles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/puzzles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/waldo.self-654f71477aaf489aaae3efe1456305ac6c29b20aa2c6ef5a0e209d7f262b76e4.css?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/puzzle.self-d95267947f04ba5b6de4dbbeeaabc60829e097dc1977e594949b85fdbbfe93b3.js?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/puzzles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/assets/thumbs/waldo1-528e8b193e9d22e39ce356471c0e5a13259d54b8038134be15c77eaf60213b3a.jpg" for ::1 at 2016-04-17 19:39:59 -0400
