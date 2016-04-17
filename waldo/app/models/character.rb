@@ -1,4 +1,5 @@
 class Character < ActiveRecord::Base
+
   belongs_to :puzzle
   validates :top, numericality: { only_integer: true }, presence: true
   validates :bottom, numericality: { only_integer: true, greater_than: :top }, presence: true
@@ -9,22 +10,11 @@ class Character < ActiveRecord::Base
   def check_location(x, y)
     valid = []
 
-    if x >= self.left && x <= self.right
-      valid << true
+    if x.to_i >= self.left && x.to_i <= self.right && y.to_i >= self.top && y.to_i <= self.bottom
+      return "found"
     else
-      valid << false
-    end
-
-    if y >= self.top && y <= self.bottom
-      valid << true
-    else
-      valid << false
-    end
-
-    if valid == [true, true]
-      return "true"
-    else
-      return "false"
+      return "tryagain"
     end
   end
+
 end

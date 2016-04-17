@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :puzzles, only: [:index, :show]
   get '/check_character', to: 'puzzles#check_character'
+  get '/submit_name', to: 'puzzles#submit_toptime'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
