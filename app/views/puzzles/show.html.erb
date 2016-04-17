@@ -1,0 +1,37 @@
+<h1><%= @puzzle.title %></h1>
+<div id="puzzle-div">
+  <%= image_tag(@puzzle.image, id: 'puzzle') %>
+  <div id="picker">
+    <% for character in @characters %>
+      <div id="<%= character.id %>" class="name-button"><%= character.name %></div>
+    <% end %>
+  </div>
+  <div id="complete">
+    <h2>Congratalutions!</h2>
+    <p>You solved the puzzle in:</p>
+    <div id="time"></div>
+    <div id="record">
+      <p>You've set a new record for this puzzle!</p>
+      <p>To save this new record, please submit your name:</p>
+      <%= form_tag("#", method: "POST") do %>
+        <%= text_field_tag(:username) %>
+        <%= submit_tag("Submit", id: "submit") %>
+      <% end %>
+    </div>
+    <div id="tooslow">
+
+    </div>
+  </div>
+</div>
+<div id="character-list-container">
+  <div id="character-list">
+    <h2>Find:</h2>
+    <ul class"character-list">
+      <% for character in @characters %>
+      <li class="character" id="cl<%= character.id %>"><div class="name"><%= character.name %></div><%= image_tag("characters/#{character.name}.jpg") %>
+      </li>
+    <% end %>
+    </ul>
+    <div id="back"><%= link_to("Back", puzzles_path) %></div>
+  </div>
+</div>
