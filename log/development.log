@@ -24566,3 +24566,76 @@ Started GET "/assets/puzzles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/thumbs/waldo1-528e8b193e9d22e39ce356471c0e5a13259d54b8038134be15c77eaf60213b3a.jpg" for ::1 at 2016-04-17 19:39:59 -0400
+
+
+Started GET "/" for ::1 at 2016-04-17 23:59:30 -0400
+Processing by PuzzlesController#index as HTML
+  [1m[35mPuzzle Load (0.3ms)[0m  SELECT "puzzles".* FROM "puzzles"
+  Rendered puzzles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/puzzles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-17 23:59:30 -0400
+
+
+Started GET "/assets/thumbs/waldo1-528e8b193e9d22e39ce356471c0e5a13259d54b8038134be15c77eaf60213b3a.jpg" for ::1 at 2016-04-17 23:59:30 -0400
+  [1m[36mPuzzle Load (0.7ms)[0m  [1mSELECT  "puzzles".* FROM "puzzles"  ORDER BY "puzzles"."id" ASC LIMIT 1[0m
+  [1m[35mCharacter Load (0.4ms)[0m  SELECT  "characters".* FROM "characters"  ORDER BY "characters"."id" ASC LIMIT 1
+  [1m[36mCharacter Load (1.6ms)[0m  [1mSELECT  "characters".* FROM "characters"  ORDER BY "characters"."id" DESC LIMIT 1[0m
+
+
+Started GET "/puzzles/1" for ::1 at 2016-04-18 00:06:50 -0400
+Processing by PuzzlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPuzzle Load (0.3ms)[0m  [1mSELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."puzzle_id" = $1  [["puzzle_id", 1]]
+  Rendered puzzles/show.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 71ms (Views: 67.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/characters/Waldo-f3628091b4f91f36a4f5f55a877d274e9614d2a766c95a93afc107c4c7312ebc.jpg" for ::1 at 2016-04-18 00:06:50 -0400
+
+
+Started GET "/puzzles/1" for ::1 at 2016-04-18 00:08:08 -0400
+Processing by PuzzlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPuzzle Load (0.3ms)[0m  [1mSELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."puzzle_id" = $1  [["puzzle_id", 1]]
+  Rendered puzzles/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/waldo.self-8cbea2eeeed270e4d789fdfcb7b9b9fbc59950c0d08d5eac4aaaeac9f3971582.css?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/puzzles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/puzzle.self-d95267947f04ba5b6de4dbbeeaabc60829e097dc1977e594949b85fdbbfe93b3.js?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/puzzles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/waldo1-f287d2cd79a7deca1210a14400fb63f57148c3d26d8150815f30d3c4b34e3fd6.jpg" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/characters/Waldo-f3628091b4f91f36a4f5f55a877d274e9614d2a766c95a93afc107c4c7312ebc.jpg" for ::1 at 2016-04-18 00:08:09 -0400
+
+
+Started GET "/assets/characters/Odlaw-0ec733bbd651cc34980212aad2dc9749c001ccbb74084a64199ef7962735d648.jpg" for ::1 at 2016-04-18 00:08:09 -0400
