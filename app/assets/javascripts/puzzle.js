@@ -3,9 +3,12 @@ var puzzle = (function($){
   var finderListener = function() {
     $('#puzzle').click(function(event) {
       event.preventDefault();
-      var offset = $(this).offset();
+      var offset = $(this).parent().offset();
       var relX = event.pageX - offset.left;
       var relY = event.pageY - offset.top;
+
+      console.log("X: " + relX + ", Y: " + relY);
+
       tagCharacter(relX, relY);
 
     });
@@ -60,7 +63,7 @@ var puzzle = (function($){
       $('#submit').click(submitHandler);
     } else {
       $('#record').css({display: "none"});
-      $('#tooslow').css({display: "block"}).text(tooSlow);
+      $('#tooslow').css({display: "block"}).html  (tooSlow);
     }
 
   };
