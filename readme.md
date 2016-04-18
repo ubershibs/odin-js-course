@@ -12,3 +12,4 @@ Projects include:
 - Mint - learning about jQuery form validation.
 - OMDB - pulling data using Ajax, infinite scroll.
 - Google Maps - more API and AJAX fun.
+- Waldo - integrating a JS front-end and a Rails backend.
