@@ -22,3 +22,6 @@ Projects include:
 ###Linking to APIs and Your Rails Back End
 - Google Maps - more API and AJAX fun.
 - Waldo - integrating a JS front-end and a Rails backend.
+
+###Server Side Javascript and Javascript Frameworks
+- LearnYouNode - worked through the 13 exercises in this Node.js tutorial (the Node project for the Odin Project has yet to be fleshed out.)
