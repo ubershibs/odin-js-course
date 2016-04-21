@@ -309,3 +309,7 @@ h1 {
   width: auto;
   text-align: center;
 }
+
+strong {
+  font-weight: bold;
+}
