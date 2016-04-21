@@ -42,6 +42,7 @@ var puzzle = (function($){
 
 
   var displayTime = function(time, new_toptime){
+    console.log("I get called");
     if (time >= 60) {
       var minutes = time / 60;
       var seconds = time % 60;

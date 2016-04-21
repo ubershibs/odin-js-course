@@ -48025,3 +48025,188 @@ Processing by PuzzlesController#check_character as JSON
   [1m[36mCharacter Load (0.4ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 2]]
   [1m[35mPuzzle Load (0.2ms)[0m  SELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1  [["id", 1]]
 Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-04-21 13:12:53 -0400
+Processing by PuzzlesController#index as HTML
+  [1m[36mPuzzle Load (0.3ms)[0m  [1mSELECT "puzzles".* FROM "puzzles"[0m
+  Rendered puzzles/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 86ms (Views: 81.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/puzzle.self-b7656db8b5ce6b37c8d15ea4d8449f19c7eea2308cf7c5f997c497ec8d4267f9.js?body=1" for ::1 at 2016-04-21 13:12:53 -0400
+
+
+Started GET "/puzzles/1" for ::1 at 2016-04-21 13:12:55 -0400
+Processing by PuzzlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCharacter Load (0.1ms)[0m  [1mSELECT "characters".* FROM "characters" WHERE "characters"."puzzle_id" = $1[0m  [["puzzle_id", 1]]
+  Rendered puzzles/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 20.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/puzzles/1" for ::1 at 2016-04-21 13:13:03 -0400
+Processing by PuzzlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCharacter Load (0.1ms)[0m  [1mSELECT "characters".* FROM "characters" WHERE "characters"."puzzle_id" = $1[0m  [["puzzle_id", 1]]
+  Rendered puzzles/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/puzzles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/puzzle.self-b7656db8b5ce6b37c8d15ea4d8449f19c7eea2308cf7c5f997c497ec8d4267f9.js?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/waldo.self-fa16a980f9dfcf4542d39c160df5e3bfa7cfc73100946b943ed8178d44dcf8e2.css?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/puzzles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/waldo1-f287d2cd79a7deca1210a14400fb63f57148c3d26d8150815f30d3c4b34e3fd6.jpg" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/characters/Waldo-f3628091b4f91f36a4f5f55a877d274e9614d2a766c95a93afc107c4c7312ebc.jpg" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/assets/characters/Odlaw-0ec733bbd651cc34980212aad2dc9749c001ccbb74084a64199ef7962735d648.jpg" for ::1 at 2016-04-21 13:13:03 -0400
+
+
+Started GET "/check_character?c=1&x=549.5&y=395" for ::1 at 2016-04-21 13:13:07 -0400
+Processing by PuzzlesController#check_character as JSON
+  Parameters: {"c"=>"1", "x"=>"549.5", "y"=>"395"}
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPuzzle Load (0.2ms)[0m  [1mSELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/check_character?c=2&x=549.5&y=395" for ::1 at 2016-04-21 13:13:10 -0400
+Processing by PuzzlesController#check_character as JSON
+  Parameters: {"c"=>"2", "x"=>"549.5", "y"=>"395"}
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPuzzle Load (0.1ms)[0m  [1mSELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/check_character?c=2&x=249.5&y=375" for ::1 at 2016-04-21 13:13:10 -0400
+Processing by PuzzlesController#check_character as JSON
+  Parameters: {"c"=>"2", "x"=>"249.5", "y"=>"375"}
+  [1m[35mCharacter Load (0.2ms)[0m  SELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPuzzle Load (0.2ms)[0m  [1mSELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "puzzles" SET "toptime" = $1, "updated_at" = $2 WHERE "puzzles"."id" = $3[0m  [["toptime", 7], ["updated_at", "2016-04-21 17:13:10.546359"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-21 19:12:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PuzzlesController#index as HTML
+  [1m[35mPuzzle Load (0.5ms)[0m  SELECT "puzzles".* FROM "puzzles"
+  Rendered puzzles/index.html.erb within layouts/application (580.0ms)
+Completed 200 OK in 714ms (Views: 688.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/puzzles/1" for ::1 at 2016-04-21 19:12:25 -0400
+Processing by PuzzlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPuzzle Load (0.4ms)[0m  [1mSELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."puzzle_id" = $1  [["puzzle_id", 1]]
+  Rendered puzzles/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 114ms (Views: 26.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/puzzles/1" for ::1 at 2016-04-21 19:12:37 -0400
+Processing by PuzzlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPuzzle Load (0.3ms)[0m  [1mSELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCharacter Load (0.3ms)[0m  SELECT "characters".* FROM "characters" WHERE "characters"."puzzle_id" = $1  [["puzzle_id", 1]]
+  Rendered puzzles/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/puzzles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/puzzle.self-b7656db8b5ce6b37c8d15ea4d8449f19c7eea2308cf7c5f997c497ec8d4267f9.js?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/puzzles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/waldo.self-fa16a980f9dfcf4542d39c160df5e3bfa7cfc73100946b943ed8178d44dcf8e2.css?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/waldo1-f287d2cd79a7deca1210a14400fb63f57148c3d26d8150815f30d3c4b34e3fd6.jpg" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/characters/Odlaw-0ec733bbd651cc34980212aad2dc9749c001ccbb74084a64199ef7962735d648.jpg" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/assets/characters/Waldo-f3628091b4f91f36a4f5f55a877d274e9614d2a766c95a93afc107c4c7312ebc.jpg" for ::1 at 2016-04-21 19:12:37 -0400
+
+
+Started GET "/check_character?c=1&x=544.5&y=391" for ::1 at 2016-04-21 19:12:41 -0400
+Processing by PuzzlesController#check_character as JSON
+  Parameters: {"c"=>"1", "x"=>"544.5", "y"=>"391"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/check_character?c=2&x=544.5&y=391" for ::1 at 2016-04-21 19:12:45 -0400
+Processing by PuzzlesController#check_character as JSON
+  Parameters: {"c"=>"2", "x"=>"544.5", "y"=>"391"}
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/check_character?c=2&x=599.5&y=420" for ::1 at 2016-04-21 19:12:45 -0400
+Processing by PuzzlesController#check_character as JSON
+  Parameters: {"c"=>"2", "x"=>"599.5", "y"=>"420"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/check_character?c=2&x=254.5&y=375" for ::1 at 2016-04-21 19:12:45 -0400
+Processing by PuzzlesController#check_character as JSON
+  Parameters: {"c"=>"2", "x"=>"254.5", "y"=>"375"}
+  [1m[36mCharacter Load (0.2ms)[0m  [1mSELECT  "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT  "puzzles".* FROM "puzzles" WHERE "puzzles"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
