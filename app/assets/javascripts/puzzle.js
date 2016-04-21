@@ -3,7 +3,8 @@ var puzzle = (function($){
   var finderListener = function() {
     $('#puzzle').click(function(event) {
       event.preventDefault();
-      var offset = $(this).parent().offset();
+      var offset = $(this).offset();
+      console.log(offset);
       var relX = event.pageX - offset.left;
       var relY = event.pageY - offset.top;
 
