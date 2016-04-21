@@ -4,7 +4,6 @@ var puzzle = (function($){
     $('#puzzle').click(function(event) {
       event.preventDefault();
       var offset = $(this).offset();
-      console.log(offset);
       var relX = event.pageX - offset.left;
       var relY = event.pageY - offset.top;
 
@@ -19,7 +18,6 @@ var puzzle = (function($){
     $('#picker').css({left: relX, top: relY}).show();
 
     $('.name-button').click(function(event) {
-      var title = $('h1').text();
       var character = $(event.target).attr('id');
 
       $.get({
