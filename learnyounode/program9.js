@@ -26,6 +26,6 @@ function doRequest(url) {
 }
 
 for(var i = 0; i < listUrls.length; i++){
-  doRequest(listUrls[i], i);
+  doRequest(listUrls[i]);
 }
 

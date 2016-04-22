@@ -25,10 +25,12 @@ class PuzzlesController < ApplicationController
       response[:solve_time] = (Time.now - Time.parse(session[:start_time])).floor
       if @puzzle.toptime == nil
         response[:new_toptime] = "yes"
+      elsif response[:solve_time] < @puzzle.toptime
+        response[:new_toptime] = "yes"
+        @puzzle.update_attribute(:toptime, response[:solve_time]);
       else
-        response[:new_toptime] = response[:solve_time] < @puzzle.toptime ? "yes" : "no"
+        response[:new_toptime] = "no"
       end
-      @puzzle.update_attribute(:toptime, response[:solve_time]);
     end
 
     render json: JSON.generate(response)

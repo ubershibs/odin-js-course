@@ -6,4 +6,4 @@ I created this photo slider in response to the Odin Project's assignment [found 
 - Hover over left or right side of image to get a prev/next button and preview
 - Dots shift along with image. Clicking a dot fast forwards you to that image.
 
-You [preview the slider](https://htmlpreview.github.io/?https://github.com/ubershibs/odin-js-course/blob/master/slider/index.html), but I recommend cloning/downloading the slider folder's contents and opening the index.html in your own browser, at least until I have a chance to post the files on my own server.
+You [preview the slider](http://lukewalker.org/odin/js-course/slider/)

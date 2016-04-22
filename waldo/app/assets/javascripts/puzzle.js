@@ -3,7 +3,7 @@ var puzzle = (function($){
   var finderListener = function() {
     $('#puzzle').click(function(event) {
       event.preventDefault();
-      var offset = $(this).parent().offset();
+      var offset = $(this).offset();
       var relX = event.pageX - offset.left;
       var relY = event.pageY - offset.top;
 
@@ -18,7 +18,6 @@ var puzzle = (function($){
     $('#picker').css({left: relX, top: relY}).show();
 
     $('.name-button').click(function(event) {
-      var title = $('h1').text();
       var character = $(event.target).attr('id');
 
       $.get({
@@ -43,8 +42,7 @@ var puzzle = (function($){
 
 
   var displayTime = function(time, new_toptime){
-    var tooSlow = '<p>The record for quickest solution is <strong> <%= @puzzle.record_time %></strong> set by <strong><%= @puzzle.topholder %></strong>.</p>';
-
+    console.log("I get called");
     if (time >= 60) {
       var minutes = time / 60;
       var seconds = time % 60;
@@ -63,9 +61,8 @@ var puzzle = (function($){
       $('#submit').click(submitHandler);
     } else {
       $('#record').css({display: "none"});
-      $('#tooslow').css({display: "block"}).html  (tooSlow);
+      $('#tooslow').css({display: "block"});
     }
-
   };
 
   var submitHandler = function(event) {
