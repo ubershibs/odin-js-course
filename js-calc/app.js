@@ -112,3 +112,68 @@ var calculate_step = function() {
     i = 0;
   }
 };
+
+document.onkeyup = function(e) {
+  e = e || eventsa
+  if(!e.shiftKey){
+    switch(e.keyCode){
+      case 49:
+        press_button(1);
+        break;
+      case 50:
+        press_button(2);
+        break;
+      case 51:
+        press_button(3);
+        break;
+      case 52:
+        press_button(4);
+        break;
+      case 53:
+        press_button(5);
+        break;
+      case 54:
+        press_button(6);
+        break;
+      case 55:
+        press_button(7);
+        break;
+      case 56:
+        press_button(8);
+        break;
+      case 57:
+        press_button(9);
+        break;
+      case 48:
+        press_button(0);
+        break;
+      case 187:
+        operator('equals');
+        break;
+      case 189:
+        operator('subtract');
+        break;
+      case 88:
+        operator('multiply');
+        break;
+      case 191:
+        operator('divide');
+      case 190:
+        press_button('.');
+        break;
+      case 13:
+        operator('equals');
+        break;
+      case 27:
+        reset();
+    }
+  } else if(e.shiftKey) {
+    switch(e.keyCode){
+      case 187:
+        operator('add');
+        break;
+      case 56:
+        operator('multiply');
+    }
+  }
+};
