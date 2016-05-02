@@ -114,7 +114,7 @@ var calculate_step = function() {
 };
 
 document.onkeyup = function(e) {
-  e = e || eventsa
+  e = e || event
   if(!e.shiftKey){
     switch(e.keyCode){
       case 49:
