@@ -6,14 +6,48 @@ $(document).ready(function tictactoe() {
   var current_player = x;
   var winner = "none";
   var move = 0;
+  var computer = o;
+  var start_message = $('#message').clone();
+
+  function virtualPlayer(player) {
+    computer = player;
+    $('#message').empty();
+    $('#message').text("Fine, I will be " + computer.toUpperCase());
+    if(current_player === computer){
+      virtualMove();
+    }
+  }
+
+  function virtualMove() {
+    var box = Math.floor(Math.random() * 8);
+    if(board[box] === BLANK) {
+      $('*[data-position="' + box + '"]').trigger("click");
+    } else {
+      box = board.indexOf(BLANK);
+      if(box===-1) {
+        checkForWinner();
+      } else {
+        $('*[data-position="' + box + '"]').trigger("click");
+      }
+    }
+  }
 
   function resetState() {
     board = [BLANK, BLANK, BLANK, BLANK, BLANK, BLANK, BLANK, BLANK, BLANK];
     current_player = x;
+    computer = o;
     winner = "none";
     move = 0;
     drawBoard();
-    displayMessage("Your turn, X",'lightgray');
+    $('#message').replaceWith(start_message);
+    $('#x').click(function(){
+      event.preventDefault();
+      virtualPlayer(o);
+    });
+    $('#o').click(function() {
+      event.preventDefault();
+      virtualPlayer(x);
+    });
     $('#game-over').css({display: 'none'});
     $('#board').css({display: 'block'});
   }
@@ -36,6 +70,9 @@ $(document).ready(function tictactoe() {
       drawBoard();
       checkForWinner();
       current_player = (current_player === x ? o : x);
+      if(current_player === computer) {
+        virtualMove();
+      }
       displayMessage("Your turn, " + current_player, 'lightgray');
     }
   }
@@ -68,9 +105,23 @@ $(document).ready(function tictactoe() {
       $('#game-over').text("Stalemate! All squares were filled without either player getting three in a row. Click here to play again.").css({display: 'block'});
     } else if(winner !== "none") {
       $('#board').css({display: 'none'});
-      $('#game-over').text("Congratulations, " + winner + "! You win this time! Click here to play again.").css({display: 'block'});
+      if(winner === computer) {
+        $('#game-over').text("Yay! I win this time! Click here to play again.").css({display: 'block'});
+      } else {
+        $('#game-over').text("Congratulations, " + winner + "! You win this time! Click here to play again.").css({display: 'block'});
+      }
     }
     $('#game-over').one("click", resetState);
   }
+
+  $('#x').click(function(){
+    event.preventDefault();
+    virtualPlayer(o);
+  });
+  $('#o').click(function() {
+    event.preventDefault();
+    virtualPlayer(x);
+  });
 });
+
 
